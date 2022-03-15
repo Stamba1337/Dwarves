@@ -35,7 +35,7 @@ namespace WindowsFormsApp8.Controllers
         }
         public void UpdateDwarf(int id, Dwarf d)
         {
-            var
+            
         }
 
     }
