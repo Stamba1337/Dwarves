@@ -38,6 +38,9 @@
             this.lblBeardLenght = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtBeardLenght = new System.Windows.Forms.TextBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.btn_UpdateDwarf = new System.Windows.Forms.Button();
+            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvdwarf)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -118,6 +121,16 @@
             this.txtBeardLenght.Size = new System.Drawing.Size(100, 38);
             this.txtBeardLenght.TabIndex = 5;
             // 
+            // btn_UpdateDwarf
+            // 
+            this.btn_UpdateDwarf.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.btn_UpdateDwarf.Location = new System.Drawing.Point(672, 236);
+            this.btn_UpdateDwarf.Name = "btn_UpdateDwarf";
+            this.btn_UpdateDwarf.Size = new System.Drawing.Size(116, 98);
+            this.btn_UpdateDwarf.TabIndex = 6;
+            this.btn_UpdateDwarf.Text = "Update Dwarf\r\n";
+            this.btn_UpdateDwarf.UseVisualStyleBackColor = true;
+            // 
             // DwarvesView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -125,6 +138,7 @@
             this.BackgroundImage = global::WindowsFormsApp8.Properties.Resources.maxresdefault;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_UpdateDwarf);
             this.Controls.Add(this.txtBeardLenght);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblBeardLenght);
@@ -152,5 +166,8 @@
         private System.Windows.Forms.Label lblBeardLenght;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtBeardLenght;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Button btn_UpdateDwarf;
+        private System.ComponentModel.BackgroundWorker backgroundWorker2;
     }
 }

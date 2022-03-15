@@ -31,7 +31,12 @@ namespace WindowsFormsApp8.Controllers
                 d.Id = lastDwarf.Id + 1;
                 db.Dwarves.Add(d);
                 db.SaveChanges();
-            }
+            }          
         }
+        public void UpdateDwarf(int id, Dwarf d)
+        {
+            var
+        }
+
     }
 }
