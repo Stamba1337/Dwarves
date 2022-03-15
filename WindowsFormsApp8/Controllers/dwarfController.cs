@@ -17,7 +17,7 @@ namespace WindowsFormsApp8.Controllers
             }
         }
 
-        public void CreateDwarf (Dwarf d)
+        public void CreateDwarf(Dwarf d)
         {
             using (dwarvesDBEntities db = new dwarvesDBEntities())
             {
