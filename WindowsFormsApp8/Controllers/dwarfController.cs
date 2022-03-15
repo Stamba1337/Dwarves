@@ -17,5 +17,21 @@ namespace WindowsFormsApp8.Controllers
             }
         }
 
+        public void CreateDwarf (Dwarf d)
+        {
+            using (dwarvesDBEntities db = new dwarvesDBEntities())
+            {
+                var lastDwarf = db.Dwarves.ToList().LastOrDefault();
+                if (lastDwarf == null)
+                {
+                    lastDwarf = new Dwarf();
+                    lastDwarf.Id = 0;
+                }
+
+                d.Id = lastDwarf.Id + 1;
+                db.Dwarves.Add(d);
+                db.SaveChanges();
+            }
+        }
     }
 }

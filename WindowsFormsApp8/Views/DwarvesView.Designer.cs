@@ -36,6 +36,8 @@
             this.lblName = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.lblBeardLenght = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtBeardLenght = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvdwarf)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -82,7 +84,7 @@
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.btnAdd.Location = new System.Drawing.Point(644, 35);
+            this.btnAdd.Location = new System.Drawing.Point(463, 157);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(100, 98);
             this.btnAdd.TabIndex = 2;
@@ -100,6 +102,22 @@
             this.lblBeardLenght.Text = "BeardLenght";
             this.lblBeardLenght.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // txtName
+            // 
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.txtName.Location = new System.Drawing.Point(648, 35);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(100, 38);
+            this.txtName.TabIndex = 4;
+            // 
+            // txtBeardLenght
+            // 
+            this.txtBeardLenght.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.txtBeardLenght.Location = new System.Drawing.Point(648, 92);
+            this.txtBeardLenght.Name = "txtBeardLenght";
+            this.txtBeardLenght.Size = new System.Drawing.Size(100, 38);
+            this.txtBeardLenght.TabIndex = 5;
+            // 
             // DwarvesView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -107,6 +125,8 @@
             this.BackgroundImage = global::WindowsFormsApp8.Properties.Resources.maxresdefault;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtBeardLenght);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblBeardLenght);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.lblName);
@@ -117,6 +137,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvdwarf)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -129,5 +150,7 @@
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label lblBeardLenght;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtBeardLenght;
     }
 }

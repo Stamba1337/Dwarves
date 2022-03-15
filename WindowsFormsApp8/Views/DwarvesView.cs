@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp8.Controllers;
+using WindowsFormsApp8.Models;
 
 namespace WindowsFormsApp8.Views
 {
@@ -21,6 +22,10 @@ namespace WindowsFormsApp8.Views
             InitializeComponent();
         }
 
+        private void RefreshTable()
+        {
+            dgvdwarf.DataSource = dwarfController.GetDwarves();
+        }
         private void DwarvesView_Load(object sender, EventArgs e)
         {
             dgvdwarf.DataSource = dwarfController.GetDwarves();
@@ -28,7 +33,11 @@ namespace WindowsFormsApp8.Views
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
+            Dwarf dwarf = new Dwarf();
+            dwarf.Name = txtName.Text;
+            dwarf.BeardLenght = int.Parse(txtBeardLenght.Text);
+            dwarfController.CreateDwarf(dwarf);
+            RefreshTable();
         }
     }
 }
