@@ -34,8 +34,6 @@ namespace WindowsFormsApp8.Controllers
             }
         }
 
-        //Delete - Second Dev
-       
         public void DeleteDwarf(int id)
         {
             using (dwarvesDBEntities ex = new dwarvesDBEntities())

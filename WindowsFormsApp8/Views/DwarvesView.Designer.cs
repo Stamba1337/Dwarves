@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.dgvdwarf = new System.Windows.Forms.DataGridView();
             this.lblName = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -36,30 +35,14 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtBeardLenght = new System.Windows.Forms.TextBox();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.beardLenghtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.btn_UpdateDwarf = new System.Windows.Forms.Button();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.beardLenghtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvdwarf)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvdwarf
             // 
-            this.dgvdwarf.AutoGenerateColumns = false;
             this.dgvdwarf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvdwarf.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
-            this.nameDataGridViewTextBoxColumn,
-            this.Id,
-            this.beardLenghtDataGridViewTextBoxColumn});
-            this.dgvdwarf.DataSource = this.bindingSource1;
             this.dgvdwarf.Location = new System.Drawing.Point(27, 12);
             this.dgvdwarf.Name = "dgvdwarf";
             this.dgvdwarf.Size = new System.Drawing.Size(389, 243);
@@ -112,6 +95,16 @@
             this.txtBeardLenght.Size = new System.Drawing.Size(100, 38);
             this.txtBeardLenght.TabIndex = 5;
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(598, 277);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(82, 62);
+            this.btnDelete.TabIndex = 6;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // btn_UpdateDwarf
             // 
             this.btn_UpdateDwarf.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
@@ -122,62 +115,6 @@
             this.btn_UpdateDwarf.Text = "Update Dwarf";
             this.btn_UpdateDwarf.UseVisualStyleBackColor = true;
             this.btn_UpdateDwarf.Click += new System.EventHandler(this.btn_UpdateDwarf_Click);
-            // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataSource = typeof(WindowsFormsApp8.Models.Dwarf);
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.Visible = false;
-            // 
-            // beardLenghtDataGridViewTextBoxColumn
-            // 
-            this.beardLenghtDataGridViewTextBoxColumn.DataPropertyName = "BeardLenght";
-            this.beardLenghtDataGridViewTextBoxColumn.HeaderText = "BeardLenght";
-            this.beardLenghtDataGridViewTextBoxColumn.Name = "beardLenghtDataGridViewTextBoxColumn";
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(666, 193);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(82, 62);
-            this.btnDelete.TabIndex = 6;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataSource = typeof(WindowsFormsApp8.Models.Dwarf);
-            // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.Visible = false;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // beardLenghtDataGridViewTextBoxColumn
-            // 
-            this.beardLenghtDataGridViewTextBoxColumn.DataPropertyName = "BeardLenght";
-            this.beardLenghtDataGridViewTextBoxColumn.HeaderText = "BeardLenght";
-            this.beardLenghtDataGridViewTextBoxColumn.Name = "beardLenghtDataGridViewTextBoxColumn";
             // 
             // DwarvesView
             // 
@@ -198,7 +135,6 @@
             this.Text = "DwarvesView";
             this.Load += new System.EventHandler(this.DwarvesView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvdwarf)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,7 +143,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvdwarf;
-        private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label lblBeardLenght;
@@ -219,8 +154,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn beardLenghtDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn beardLenghtDataGridViewTextBoxColumn;
     }
 }
