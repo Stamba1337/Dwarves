@@ -53,5 +53,13 @@ namespace WindowsFormsApp8.Views
 
 
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+            {
+                DataGridViewRow row = dgvdwarf.CurrentRow;
+                int id = int.Parse(row.Cells["Id"].Value.ToString());
+                dwarfController.DeleteDwarf(id);
+                RefreshTable();
+            }
     }
 }

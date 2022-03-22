@@ -34,6 +34,21 @@ namespace WindowsFormsApp8.Controllers
             }
         }
 
+        //Delete - Second Dev
+       
+        public void DeleteDwarf(int id)
+        {
+            using (dwarvesDBEntities ex = new dwarvesDBEntities())
+            {
+                var dwarvesToDelete = ex.Dwarves.Where(prop => prop.Id == id).FirstOrDefault();
+                if (dwarvesToDelete != null)
+                {
+                    ex.Dwarves.Remove(dwarvesToDelete);
+                    ex.SaveChanges();
+                }
+            }
+        }
+
         internal void UpdateDwarf(int id, Dwarf d)
         {
             using (dwarvesDBEntities ex = new dwarvesDBEntities())
