@@ -33,5 +33,19 @@ namespace WindowsFormsApp8.Controllers
                 db.SaveChanges();
             }
         }
+
+        internal void UpdateDwarf(int id, Dwarf d)
+        {
+            using (dwarvesDBEntities ex = new dwarvesDBEntities())
+            {
+                var dwarfToUpdate = ex.Dwarves.Where(dwarf => d.Id == id).FirstOrDefault();
+                if (dwarfToUpdate != null)
+                {
+                    dwarfToUpdate.Name = d.Name;
+                    dwarfToUpdate.BeardLenght = d.BeardLenght;
+                    ex.SaveChanges();
+                }
+            }
+        }
     }
 }

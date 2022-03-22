@@ -39,5 +39,19 @@ namespace WindowsFormsApp8.Views
             dwarfController.CreateDwarf(dwarf);
             RefreshTable();
         }
+
+        private void btn_UpdateDwarf_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow row = dgvdwarf.CurrentRow;
+            int id = int.Parse(row.Cells["Id"].Value.ToString());
+            Dwarf d = new Dwarf();
+            d.Id = id;
+            d.Name = txtName.Text;
+            d.BeardLenght = int.Parse(txtBeardLenght.Text);
+            dwarfController.UpdateDwarf(id, d);
+            RefreshTable();
+
+
+        }
     }
 }
