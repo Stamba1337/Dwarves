@@ -34,8 +34,6 @@ namespace WindowsFormsApp8.Controllers
             }
         }
 
-        //Delete - Second Dev
-       
         public void DeleteDwarf(int id)
         {
             using (dwarvesDBEntities ex = new dwarvesDBEntities())
@@ -44,6 +42,20 @@ namespace WindowsFormsApp8.Controllers
                 if (dwarvesToDelete != null)
                 {
                     ex.Dwarves.Remove(dwarvesToDelete);
+                    ex.SaveChanges();
+                }
+            }
+        }
+
+        internal void UpdateDwarf(int id, Dwarf d)
+        {
+            using (dwarvesDBEntities ex = new dwarvesDBEntities())
+            {
+                var dwarfToUpdate = ex.Dwarves.Where(dwarf => d.Id == id).FirstOrDefault();
+                if (dwarfToUpdate != null)
+                {
+                    dwarfToUpdate.Name = d.Name;
+                    dwarfToUpdate.BeardLenght = d.BeardLenght;
                     ex.SaveChanges();
                 }
             }

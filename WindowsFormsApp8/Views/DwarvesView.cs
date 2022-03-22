@@ -40,6 +40,20 @@ namespace WindowsFormsApp8.Views
             RefreshTable();
         }
 
+        private void btn_UpdateDwarf_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow row = dgvdwarf.CurrentRow;
+            int id = int.Parse(row.Cells["Id"].Value.ToString());
+            Dwarf d = new Dwarf();
+            d.Id = id;
+            d.Name = txtName.Text;
+            d.BeardLenght = int.Parse(txtBeardLenght.Text);
+            dwarfController.UpdateDwarf(id, d);
+            RefreshTable();
+
+
+        }
+
         private void btnDelete_Click(object sender, EventArgs e)
             {
                 DataGridViewRow row = dgvdwarf.CurrentRow;
